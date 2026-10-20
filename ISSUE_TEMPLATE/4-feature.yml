@@ -1,0 +1,29 @@
+name: Feature
+description: A unit of build work with acceptance criteria.
+type: Feature
+projects: ["Pivot-Anchor-Private-Limited/3"]
+body:
+  - type: input
+    id: spec
+    attributes:
+      label: Spec reference
+      description: Which section of spec.md this implements.
+    validations: { required: true }
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Acceptance criteria
+      placeholder: "- [ ] ..."
+    validations: { required: true }
+  - type: textarea
+    id: states
+    attributes:
+      label: States to handle
+      description: Empty, loading, error, partial, overflow, offline, permissions, and anything else specific to this feature.
+      placeholder: "- [ ] Empty: ...\n- [ ] Error: ..."
+    validations: { required: true }
+  - type: textarea
+    id: verify
+    attributes:
+      label: How this will be verified
+      description: The e2e test, Playwright or Argent walk, or screenshot set that proves it.

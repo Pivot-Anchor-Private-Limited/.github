@@ -1,0 +1,27 @@
+name: Change request
+description: A client-requested change after spec sign-off or after launch.
+title: "CR: "
+type: Change request
+labels: ["out-of-scope"]
+projects: ["Pivot-Anchor-Private-Limited/3"]
+body:
+  - type: input
+    id: requester
+    attributes:
+      label: Requested by
+    validations: { required: true }
+  - type: textarea
+    id: change
+    attributes:
+      label: The change
+    validations: { required: true }
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Scope, timeline, cost, and what it touches in the signed spec.
+  - type: dropdown
+    id: decision
+    attributes:
+      label: Decision
+      options: ["Pending", "Accepted: in scope", "Accepted: billable", "Declined"]

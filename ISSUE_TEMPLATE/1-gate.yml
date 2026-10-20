@@ -1,0 +1,29 @@
+name: Gate
+description: A pipeline phase gate. Exit criteria plus evidence, approved by a human.
+title: "Gate · "
+type: Gate
+projects: ["Pivot-Anchor-Private-Limited/3"]
+body:
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Phase
+      options: ["0 · Intake", "1 · Design foundation", "2 · Build", "3 · Verify", "4 · Audit", "5 · Reconcile", "6 · Ship"]
+    validations: { required: true }
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Exit criteria
+      description: What must be true for this gate to pass. One line per criterion.
+      placeholder: "- [ ] Every flow walked at 375 / 768 / 1280 / 1920\n- [ ] Lighthouse ≥ 95 in all four categories"
+    validations: { required: true }
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: A link for every criterion (CI run, report, screenshots, preview URL). No evidence, no pass.
+  - type: input
+    id: pr
+    attributes:
+      label: Gate PR
+      description: The PR whose approval passes this gate.

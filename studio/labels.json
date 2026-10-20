@@ -1,0 +1,20 @@
+[
+  {"name": "needs-human",    "color": "d73a4a", "description": "Waiting on a P&A human answer or approval"},
+  {"name": "needs-client",   "color": "f9a03f", "description": "Waiting on the client"},
+  {"name": "blocked",        "color": "b60205", "description": "Cannot proceed; nothing else to work on in this thread"},
+  {"name": "assumption",     "color": "fbca04", "description": "Agent proceeded on a stated assumption; confirm or correct"},
+  {"name": "agent:go",       "color": "0e8a16", "description": "Ready for an agent to pick up"},
+  {"name": "agent:working",  "color": "5319e7", "description": "An agent session is on this"},
+  {"name": "evidence-needed","color": "fef2c0", "description": "Claimed done; evidence missing or insufficient"},
+  {"name": "verified",       "color": "1a7f37", "description": "Independently verified with evidence"},
+  {"name": "regression",     "color": "e11d21", "description": "Worked before, broken now"},
+  {"name": "out-of-scope",   "color": "cfd3d7", "description": "Not in the signed spec; needs a change request"},
+  {"name": "area:design",    "color": "f4c2e8", "description": "Visual design, tokens, layout"},
+  {"name": "area:frontend",  "color": "c5def5", "description": "UI code"},
+  {"name": "area:backend",   "color": "bfdadc", "description": "API, data, server"},
+  {"name": "area:content",   "color": "fef2c0", "description": "Copy, images, CMS content"},
+  {"name": "area:infra",     "color": "d4c5f9", "description": "Deploy, env, domains, CI"},
+  {"name": "area:a11y",      "color": "0052cc", "description": "Accessibility"},
+  {"name": "area:perf",      "color": "006b75", "description": "Performance, Lighthouse"},
+  {"name": "area:responsive","color": "84b6eb", "description": "Breakpoints and device layouts"}
+]

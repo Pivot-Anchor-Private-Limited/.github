@@ -1,0 +1,33 @@
+name: Defect
+description: Something is broken or doesn't match the spec.
+title: "Defect: "
+type: Bug
+projects: ["Pivot-Anchor-Private-Limited/3"]
+body:
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options: ["Blocker: cannot ship", "Major: broken flow or spec miss", "Minor: works, but wrong", "Cosmetic: polish"]
+    validations: { required: true }
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Include the URL, device or breakpoint, and any test data.
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual
+    validations: { required: true }
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Screenshot, trace, console output, failing test.
+  - type: input
+    id: spec
+    attributes:
+      label: Spec reference
+      description: The spec line or acceptance criterion this violates, if any.

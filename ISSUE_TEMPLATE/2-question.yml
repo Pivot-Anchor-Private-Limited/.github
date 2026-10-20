@@ -1,0 +1,33 @@
+name: Question
+description: An agent needs a human answer. State the assumption you are proceeding on.
+title: "Q: "
+type: Question
+labels: ["needs-human"]
+projects: ["Pivot-Anchor-Private-Limited/3"]
+body:
+  - type: markdown
+    attributes:
+      value: "Agents: @mention the project owner in the question, because labels don't send push notifications. Keep working on anything this doesn't block."
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: One question, answerable from a phone.
+    validations: { required: true }
+  - type: textarea
+    id: options
+    attributes:
+      label: Options
+      description: The choices, with your recommendation first.
+  - type: textarea
+    id: assumption
+    attributes:
+      label: Assumption I'm proceeding on
+      description: What you did in the meantime, so a "yes" costs the human nothing.
+    validations: { required: true }
+  - type: dropdown
+    id: blocking
+    attributes:
+      label: Blocking?
+      options: ["Non-blocking: proceeding on the assumption", "Blocking: work in this area is stopped"]
+    validations: { required: true }
